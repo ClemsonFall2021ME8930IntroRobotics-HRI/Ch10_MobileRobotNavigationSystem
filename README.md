@@ -11,7 +11,7 @@ Requirements In order to run the code in this repository the user will need to i
 - Matplotlib library
 - Numpy library
 - Coppeliasim
-- Coppeliasim remote python api
+- Coppeliasim Remote Python API
 
 Installation Instructions
 - [Matplotlib](https://www.tutorialspoint.com/how-to-install-matplotlib-in-python)
