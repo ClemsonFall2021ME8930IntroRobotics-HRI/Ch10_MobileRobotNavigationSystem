@@ -40,7 +40,7 @@ The code is structured in the following manner. Please read through the explanat
 - Lines 44-60 are used to grab the handles for the motor objects in the simulation such that we can set the velocity of each motor on the mobile robot. We also setup the initial code that is needed for plotting the output of our histogram visualization to aid the view of the simulation. 
 - Lines 60-141 describe the primary loop that will run throughout the simulation. We first use the remote api to upack the lidar data that is sent from the simulation. The lidar data is packed as a 1-d array so we must transform it back into a list of shape (n,3). Each row contains an x, y, and z value relative to the position of the robot. We transform the distance data from cartesian coordinates to polar coordinates which allows us to break down the objects around the robot into sectors. We then use the formula m = (c)(a - b * d) and sum all of the points in the region to compute the obstacle density for a given sector. We utilize a sector count of 18 which allows each sector to cover 20 degrees. The robot will travel in a straight line unless an obstacle density threshold is surpassed in the -60 to 60 degree range in front of the robot. If the threshoold is surpassed the robot will rotate in place until it is clear to travel forward again. 
 
-##Simulation
+## Simulation
 
 Our simulation setup is fairly straightforward. We drop multiple simple shapes into the plane with the robot and give them the detectable and collidable properties. This allows them to be detected by the lidar sensor. We use a predefined mobile robot built into copelliasim and add a lidar sensor to it by placing it within the hierarchy of the mobile robot. 
 
