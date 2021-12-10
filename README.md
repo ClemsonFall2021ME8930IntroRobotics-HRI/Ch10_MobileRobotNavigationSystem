@@ -8,27 +8,27 @@ This repository contains the code to demonstrate content from chapter 8 Mobile R
 
 
 Requirements In order to run the code in this repository the user will need to install the following dependencies
-- matplotlib library
-- numpy library
-- coppeliasim
-- coppeliasim remote python api
+- Matplotlib library
+- Numpy library
+- Coppeliasim
+- Coppeliasim remote python api
 
 Installation Instructions
-- [matplotlib](https://www.tutorialspoint.com/how-to-install-matplotlib-in-python)
-- [numpy](https://numpy.org/install/)
-- [coppeliasim](https://coppeliarobotics.com/downloads)
-- coppeliasim remote python api - included in installation
+- [Matplotlib](https://www.tutorialspoint.com/how-to-install-matplotlib-in-python)
+- [Numpy](https://numpy.org/install/)
+- [Coppeliasim](https://coppeliarobotics.com/downloads)
+- Coppeliasim Remote Python API - included in installation
 
 ## Pre-requisites:
 
 - Python programming knowledge
-- Access to coppeliasim and simulator knowledge
-- Knowledge of coppeliasim [remote python api](https://www.coppeliarobotics.com/helpFiles/en/remoteApiFunctionsPython.htm)
-- A development environment - I prefer [vscode](https://code.visualstudio.com/)
+- Access to Coppeliasim and simulator knowledge
+- Knowledge of Coppeliasim [Remote Python API](https://www.coppeliarobotics.com/helpFiles/en/remoteApiFunctionsPython.htm)
+- A development environment - I prefer [VSCode](https://code.visualstudio.com/)
 
 ## Run Instructions
 
-In order to run the simulation open the coppeliasim LidarMobileRobot.ttt file provided in the repository. Select the play button at the top and the simulation will being. The robot will sit in an idle position until we start the python program. We must start the simulation first otherwise the remote connection that is setup by the code will fail. Once the simulation is running, run the LidarPolarHistogram.py file. This will begin reading data from the lidar sensor on the robot in the simulation and updating the motors based on the surroundings of the robot. 
+In order to run the simulation open the Coppeliasim LidarMobileRobot.ttt file provided in the repository. Select the play button at the top and the simulation will being. The robot will sit in an idle position until we start the python program. We must start the simulation first otherwise the remote connection that is setup by the code will fail. Once the simulation is running, run the LidarPolarHistogram.py file. This will begin reading data from the lidar sensor on the robot in the simulation and updating the motors based on the surroundings of the robot. 
 
 
 ## Code
@@ -44,7 +44,7 @@ The code is structured in the following manner. Please read through the explanat
 
 ## Simulation
 
-Our simulation setup is fairly straightforward. We drop multiple simple shapes into the plane with the robot using the "Add > Primative Shape" directive and give them the detectable and collidable properties which can be found in the "Dynamic Properties Tab" when you double click on a given primative shape in the hierarchy. This allows the shapes to be detected by the lidar sensor. We use a predefined mobile robot built into copelliasim and add a lidar sensor to it by placing it within the hierarchy of the mobile robot. 
+Our simulation setup is fairly straightforward. We drop multiple simple shapes into the plane with the robot using the "Add > Primative Shape" directive and give them the detectable and collidable properties which can be found in the "Dynamic Properties Tab" when you double click on a given primative shape in the hierarchy. This allows the shapes to be detected by the lidar sensor. We use a predefined mobile robot (Pioneer_p3dx) built into Copelliasim and add a lidar sensor to it by placing it within the hierarchy of the mobile robot. 
 
 ![Hierarchy](Images/Mobile_Robot_Hierarchy.PNG)
 
