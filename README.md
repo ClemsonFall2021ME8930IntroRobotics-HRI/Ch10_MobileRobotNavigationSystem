@@ -44,9 +44,10 @@ The code is structured in the following manner. Please read through the explanat
 
 Our simulation setup is fairly straightforward. We drop multiple simple shapes into the plane with the robot and give them the detectable and collidable properties. This allows them to be detected by the lidar sensor. We use a predefined mobile robot built into copelliasim and add a lidar sensor to it by placing it within the hierarchy of the mobile robot. 
 
+![Hierarchy](Images/Mobile_Robot_Hierarchy.PNG)
+
 The lidar sensor has a child script attached to it. Child scripts are used to allow extra programming function to be added to basic components in coppeliasim. We utilize the child script on the lidar sensor to make the remote connection to our python program with the command ``` simRemoteApi.start(19999) ```. We then pack the lidar data within the child script and configure the lidar sensor to pack all four quadrants of the data together all within one send. The following shows the child script and the robot environment
 
 ![Simulator](Images/Simulator.PNG)
-![Hierarchy](Images/Mobile_Robot_Hierarchy.PNG)
 ![ChildScript](Images/Child_Script.PNG)
 
