@@ -42,7 +42,7 @@ The code is structured in the following manner. Please read through the explanat
 
 ## Simulation
 
-Our simulation setup is fairly straightforward. We drop multiple simple shapes into the plane with the robot and give them the detectable and collidable properties. This allows them to be detected by the lidar sensor. We use a predefined mobile robot built into copelliasim and add a lidar sensor to it by placing it within the hierarchy of the mobile robot. 
+Our simulation setup is fairly straightforward. We drop multiple simple shapes into the plane with the robot using the "Add > Primative Shape" directive and give them the detectable and collidable properties which can be found in the "Dynamic Properties Tab" when you double click on a given primative shape in the hierarchy. This allows the shapes to be detected by the lidar sensor. We use a predefined mobile robot built into copelliasim and add a lidar sensor to it by placing it within the hierarchy of the mobile robot. 
 
 ![Hierarchy](Images/Mobile_Robot_Hierarchy.PNG)
 
