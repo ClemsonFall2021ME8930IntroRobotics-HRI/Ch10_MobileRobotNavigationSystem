@@ -46,4 +46,7 @@ Our simulation setup is fairly straightforward. We drop multiple simple shapes i
 
 The lidar sensor has a child script attached to it. Child scripts are used to allow extra programming function to be added to basic components in coppeliasim. We utilize the child script on the lidar sensor to make the remote connection to our python program with the command ``` simRemoteApi.start(19999) ```. We then pack the lidar data within the child script and configure the lidar sensor to pack all four quadrants of the data together all within one send. The following shows the child script and the robot environment
 
+![Simulator](Images/Simulator.PNG)
+![Hierarchy](Images/Mobile Robot Hierarchy.PNG)
+![ChildScript](Images/Child Script.PNG)
 
